@@ -1,0 +1,2 @@
+ >> The cloze text "Bob" does not appear within the Question. Please try again.
+ >> The cloze text "joel" does not appear within the Question. Please try again.

@@ -1,0 +1,11 @@
+{
+  "name": "flashcard-generator",
+  "version": "0.0.1",
+  "main": "main.js",
+  "repository": "https://github.com/newfoundfreedom/Flashcard-Generator.git",
+  "author": "Joel Roberts <newfoundfreedom@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^3.0.6"
+  }
+}
