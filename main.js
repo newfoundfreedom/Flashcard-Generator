@@ -39,6 +39,7 @@ inquirer.prompt([
             });
             break;
 
+
         // If user chose to Create a New Deck: prompt for the deck Name and
         //  add a top level key to the cardDecks JSON file
         case 'Create a New Deck':
@@ -52,6 +53,7 @@ inquirer.prompt([
                 new NewDeck(data.deckTitle);
             });
             break;
+
 
         // If user chose to create a Basic Card:  first prompt for which card
         //  deck to add it. Then prompt for a question to display on card front,
@@ -83,7 +85,9 @@ inquirer.prompt([
                 });
             });
             break;
-        case 'Create a Cloze Card':
+
+
+            case 'Create a Cloze Card':
             inquirer.prompt([
                 {
                     type: 'list',
