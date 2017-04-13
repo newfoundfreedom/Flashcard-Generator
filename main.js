@@ -6,7 +6,6 @@ const TakeQuiz = require('./TakeQuiz'),
 
     fs = require('fs'),
     inquirer = require('inquirer'),
-    chalk = require('chalk'),
     cardDecks = require('./cardDecks.json');
 
 // Create an array of all available card decks
@@ -50,7 +49,7 @@ inquirer.prompt([
                 }
             ]).then(function (data) {
                 // call the NewDeck constructor and supply the deck title to it
-                new NewDeck(data.deckTitle);
+                let userDeck = new NewDeck(data.deckTitle);
             });
             break;
 
@@ -81,13 +80,14 @@ inquirer.prompt([
                         name: 'bcBack'
                     }
                 ]).then(function (data) {
-                    new BasicCard(deckName, data.bcFront, data.bcBack);
+                    let userBCard = new BasicCard(deckName, data.bcFront, data.bcBack);
+                    console.log (userBCard);
                 });
             });
             break;
 
 
-            case 'Create a Cloze Card':
+        case 'Create a Cloze Card':
             inquirer.prompt([
                 {
                     type: 'list',
@@ -97,7 +97,7 @@ inquirer.prompt([
                 }
             ]).then(function (data) {
                 let deckName = data.deckName;
-                console.log(`\nBASIC CARD Creation for ${deckName} ----------------------------------------\n`);
+                console.log(`\nCLOZE CARD Creation for ${deckName} ----------------------------------------\n`);
                 inquirer.prompt([
                     {
                         type: 'input',
@@ -109,7 +109,8 @@ inquirer.prompt([
                         name: 'cloze'
                     }
                 ]).then(function (data) {
-                    new ClozeCard(deckName, data.bcFront, data.bcBack);
+                    let userCCard = new ClozeCard(deckName, data.bcFront, data.bcBack);
+                    userCCard.partial();
                 });
             });
             break;

@@ -2,7 +2,7 @@ const fs = require('fs');
 
 // BasicCard constructor which accepts 'question' and 'answer' arguments and
 //   contains front and back methods
-const BasicCard = function (deck, question, answer) {
+function BasicCard (deck, question, answer) {
     this.front = question;
     this.back = answer;
 
@@ -11,7 +11,7 @@ const BasicCard = function (deck, question, answer) {
             throw err;
         } else {
             let decks = JSON.parse(data);
-            decks[deck].push({"front": question, "back": answer});
+            decks[deck].push({"type": "basic", "front": question, "back": answer});
             decksFormatted = JSON.stringify(decks);
             fs.writeFile('./cardDecks.json', decksFormatted, function (err) {
                 if (err) {
