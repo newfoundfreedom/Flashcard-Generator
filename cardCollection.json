@@ -1,0 +1,34 @@
+{
+  "Computer": [
+    {
+      "type": "basic",
+      "question": "The first person shooter video game Doom was first released in what year?",
+      "answer": "1993"
+    },
+    {
+      "type": "basic",
+      "question": "In what year was the first Apple computer released?",
+      "answer": "1976"
+    }
+  ],
+  "History": [
+    {
+      "type": "cloze",
+      "front": "The Great Pyramid of ... is located in Cairo, Egypt.",
+      "back": "Giza"
+    },
+    {
+      "type": "cloze",
+      "full": "The 13th constitutional Amendment banned slavery.",
+      "front": "The ... constitutional Amendment banned slavery.",
+      "back": "13th"
+    }
+  ],
+  "Class": [
+    {
+      "type": "basic",
+      "front": "Who is the professor of our Class?",
+      "back": "Bob - da man"
+    }
+  ]
+}
