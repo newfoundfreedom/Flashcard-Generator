@@ -1,25 +1,30 @@
+// define and call module dependencies and global variables
 const fs = require('fs'),
     chalk = require('chalk'),
     inquirer = require('inquirer');
-  const  mainMenu = require('./main.js');
 
 let cardCollection = './cardCollection.json';
 
+// function to clear the current CLI screen
 console.reset = function () {
     return process.stdout.write('\033c');
 };
 
+// function which accepts the user specified deck as an argument. Reads the
+//  cardCollection.json file and formats it as an object.
 function TakeQuiz(deck) {
     fs.readFile(cardCollection, function (err, data) {
         if (err) {
             throw err;
         } else {
             let cards = JSON.parse(data),
-                questions = cards[deck],
-                questionTotal = (questions.length),
-                count = 0,
-                questionsCorrect = 0;
+                questions = cards[deck], // variable to hold questions from user specified deck
+                questionTotal = (questions.length), // num of questions in deck
+                count = 0, // counter to keep track of which question count
+                questionsCorrect = 0; // variable to capture num of correct answers
 
+            // loop through all questions in deck, presenting question and capturing user response
+            //  utilizing inquirer.
             let askQuestion = function (count) {
                 if (count < questionTotal) {
                     inquirer.prompt([
@@ -28,6 +33,7 @@ function TakeQuiz(deck) {
                             name: 'response'
                         }
                     ]).then(function (data) {
+                        //comparre user response to answer value - alert user either way
                         if (data.response.toLowerCase() === questions[count].back.toLowerCase()) {
                             console.log(chalk.green(` >> That is correct!\n`));
                             questionsCorrect++;
@@ -38,6 +44,7 @@ function TakeQuiz(deck) {
                         askQuestion(count)
                     });
                 } else {
+                    // Evaluate if the user got half the answers correct or not. Alert them either way- presenting the number correct.
                     if (questionsCorrect >= (questionTotal / 2)) {
                         console.reset();
                         console.log(`\n QUIZ RESULTS\n`);

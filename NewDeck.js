@@ -1,20 +1,22 @@
+// define and call module dependencies and global variables
 const fs = require('fs'),
     chalk = require('chalk');
+
 let cardCollection = './cardCollection.json';
 
-// read the cardDecks file converting
-//  into a JSON object, then add a top-level key and initialize
-//  as an array to the object, convert it back to a string and
-//  write to cardDecks file
+// read the cardCollection.json file, converting
+//  into a structured object, then add a top-level key (deck) and initialize
+//  as an array to the object. Then convert it back to a string and
+//  re-write to cardCollections file
 function NewDeck(newDeckName) {
     fs.readFile(cardCollection, function (err, data) { //read JSON file
         if (err) {
             throw err;
         } else {
-            let decks = JSON.parse(data);  // turn cardCollections into a local object
+            let decks = JSON.parse(data);  // format cardCollections
             decks[newDeckName] = [];  // add new deck property and initialize as an array
-            decksFormatted = JSON.stringify(decks); //convert it back to json
-            fs.writeFile(cardCollection, decksFormatted, function (err) {
+            decksFormatted = JSON.stringify(decks); // convert it back to long string
+            fs.writeFile(cardCollection, decksFormatted, function (err) { // re-write to .json
                 if (err) {
                     throw err;
                 } else {

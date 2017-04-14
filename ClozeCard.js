@@ -1,3 +1,4 @@
+// define and call module dependencies and global variables
 const fs = require('fs'),
     chalk = require('chalk');
 
@@ -49,6 +50,7 @@ ClozeCard.prototype.addCard = function (clozeSentence) {
                 if (err) {
                     throw err;
                 } else {
+                    //if write was successful let the user know
                     console.log(chalk.green(` >> Your Cloze Card has been successfully added to the ${chosenDeck} Deck.\n`));
                 }
             }) // end writeFile

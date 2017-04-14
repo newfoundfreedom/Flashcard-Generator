@@ -7,6 +7,7 @@ const TakeQuiz = require('./TakeQuiz'),
     inquirer = require('inquirer'),
     cardCollection = require('./cardCollection.json');
 
+
 // Create an array of all available card decks
 // let decks = JSON.parse(data);
 let deckOptions = Object.keys(cardCollection);
@@ -55,7 +56,7 @@ inquirer.prompt([
             break;
 
 
-        // If user chose to create a Basic Card:  first prompt for which card
+        // If user chose to create a Basic Card:  first prompt for which
         //  deck to add it. Then prompt for a question to display on card front,
         //  and answer on card back. Finally invoke the BasicCard constructor
         //  passing in both the question and answer.
@@ -86,7 +87,10 @@ inquirer.prompt([
             });
             break;
 
-
+        // If user chose to create a Cloze Card:  first prompt for which
+        //  deck to add it. Then prompt for a fact statement for the card front,
+        //  and word(s) to obscure which will become the answer. Finally invoke
+        //  the ClozeCard constructor passing in both the statement and cloze.
         case 'Create a Cloze Card':
             inquirer.prompt([
                 {
@@ -97,7 +101,7 @@ inquirer.prompt([
                 }
             ]).then(function (data) {
                 let deckName = data.deckName;
-                console.log(`\nCLOZE CARD Creation for ${deckName} Deck----------------------------------------\n`);
+                console.log(`\nCLOZE CARD Creation for ${deckName} Deck ............................................................\n`);
                 inquirer.prompt([
                     {
                         type: 'input',
@@ -118,8 +122,3 @@ inquirer.prompt([
             });
     } // end switch/case
 });
-
-
-
-
-
