@@ -110,8 +110,9 @@ function mainMenu() {
                         }
                     ]).then(function (data) {
                         let userCCard = new ClozeCard(deckName, data.fullText, data.cloze);
-                        if (userCCard.partial()) {
-                            userCCard.addCard(userCCard.partial());
+                        let partial = userCCard.partial();
+                        if (partial) {
+                            userCCard.addCard(partial);
                         }
                     });
                 });

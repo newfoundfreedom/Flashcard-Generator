@@ -30,5 +30,12 @@
       "front": "Who is the professor of our Class?",
       "back": "Bob - da man"
     }
+  ],
+  "Ariel's": [
+    {
+      "type": "basic",
+      "front": "Whats Ariel's first name?",
+      "back": "Ariel"
+    }
   ]
 }
