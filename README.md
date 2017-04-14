@@ -1,4 +1,4 @@
-# Flashy (A flashcard creator & quiz app) 
+# Flashy  -  a flashcard creator & quiz app 
 
 *Get prepared for your next exam with this command line interface flashcard creator & quizzing app*
 <br>
