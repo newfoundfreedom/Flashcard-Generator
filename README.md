@@ -4,11 +4,15 @@
 <br>
  <br>
  
-## Flashy Functions: 
-  * **Take a Quiz** - Select any of the flashcard decks you've created and get ready for that exam!
-  * **Create a New Deck**  - Create new decks, organize them by categories or subjects
-  * **Create Basic Card** - Pick your deck, and create a classic Front *(question)* and Back *(answer)* card.
-  * **Create a Cloze Card** - Pick your deck, and place a fact statement with a key piece of information missing on the Front. On teh back you will place the missing word(s)
+## Flashy Functions:
+
+| Function | Description |
+| ------- | ----------- |
+| **Take a Quiz** | Select any of the flashcard decks you've created and get ready for that exam! |
+| **Create a New Deck** | Create new decks, organize them by categories or subjects |
+| **Create a Basic Card** | Pick your deck, and create a classic Front *(question)* and Back *(answer)* card. |
+| **Create a Cloze Card** | Pick your deck, and place a fact statement with a key piece of information missing on the Front. On teh back you will place the missing word(s) |
+ 
  
 ## Installation
 First, clone the following repo by pasting the following:
