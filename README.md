@@ -12,7 +12,7 @@
   * **Create a Cloze Card** - Pick your deck, and place a fact statement with a key piece of information missing on the Front. On teh back you will place the missing word(s)
  <br>
  
-### Installation
+## Installation
 First, clone the following repo by pasting the following:
 ```
   git clone git@github.com:newfoundfreedom/flashcard-generator.git
@@ -22,7 +22,7 @@ Next, this package is dependent on [inquirer](https://www.npmjs.com/package/inqu
 yarn install
 ```
 
-### Execution
+## Execution
 Run the application by typing 
 ```
 node main
