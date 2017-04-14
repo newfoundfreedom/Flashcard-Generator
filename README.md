@@ -2,7 +2,6 @@
 
 *Get prepared for your next exam with this command line interface flashcard creator & quizzing app*
 <br>
-![](img/Dixby-in-action.jpg)
  <br>
  
 ## Flashy Functions: 
