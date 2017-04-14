@@ -1,5 +1,6 @@
 const fs = require('fs'),
     chalk = require('chalk');
+
 let cardCollection = './cardCollection.json';
 
 // ClozeCard constructor accepts 'fullText' and 'cloze' arguments.  'fullText' argument
@@ -19,8 +20,8 @@ ClozeCard.prototype.partial = function () {
         let clozeSentence = this.full.replace(this.cloze, '...');
         return clozeSentence;
     } else {
-        console.log(chalk.red(`  >> Card creation failed. The word "${this.cloze}"` +
-        ` was not found within the full fact statement.  Please try again.\n`));
+        console.log(chalk.red(` >> Card creation failed. The word "${this.cloze}"` +
+        ` was not found within the full fact statement.\n    Please try again.\n`));
         return false;
     }
 };
@@ -48,7 +49,7 @@ ClozeCard.prototype.addCard = function (clozeSentence) {
                 if (err) {
                     throw err;
                 } else {
-                    console.log(chalk.green(`  >> Your Cloze Card has been successfully added to the ${chosenDeck} Deck.\n`));
+                    console.log(chalk.green(` >> Your Cloze Card has been successfully added to the ${chosenDeck} Deck.\n`));
                 }
             }) // end writeFile
         } // end else

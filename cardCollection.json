@@ -2,13 +2,56 @@
   "Computer": [
     {
       "type": "basic",
-      "question": "The first person shooter video game Doom was first released in what year?",
-      "answer": "1993"
+      "front": "What invention replaced vacuum tubes and made computers much smaller and faster.",
+      "back": "transistor"
     },
     {
       "type": "basic",
-      "question": "In what year was the first Apple computer released?",
-      "answer": "1976"
+      "front": "What name is given to half of a Byte (4 bits)?",
+      "back": "Nibble"
+    },
+    {
+      "type": "cloze",
+      "full": "The initials GUI stand for Graphical User Interface",
+      "front": "The initials GUI stand for ...",
+      "back": "Graphical User Interface"
+    },
+    {
+      "type": "basic",
+      "front": "What does ICMP stand for?",
+      "back": "Internet Control Message Protocol"
+    },
+    {
+      "type": "basic",
+      "front": "In what year was the Domain Name System created?",
+      "back": "1983"
+    },
+    {
+      "type": "basic",
+      "front": "What company invented the floppy disk?",
+      "back": "IBM"
+    },
+    {
+      "type": "cloze",
+      "full": "Tux is teh name of Linux's Mascot",
+      "front": "... is teh name of Linux's Mascot",
+      "back": "Tux"
+    },
+    {
+      "type": "basic",
+      "front": "In what year was the first Apple computer released?",
+      "back": "1976"
+    },
+    {
+      "type": "basic",
+      "front": "The headquarters of Microsoft is located in what US State?",
+      "back": "Washington"
+    },
+    {
+      "type": "cloze",
+      "full": "Netscape Navigator was originaly named Mozilla.",
+      "front": "Netscape Navigator was originaly named ....",
+      "back": "Mozilla"
     }
   ],
   "History": [
@@ -22,20 +65,51 @@
       "full": "The 13th constitutional Amendment banned slavery.",
       "front": "The ... constitutional Amendment banned slavery.",
       "back": "13th"
-    }
-  ],
-  "Class": [
+    },
     {
       "type": "basic",
-      "front": "Who is the professor of our Class?",
-      "back": "Bob - da man"
-    }
-  ],
-  "Ariel's": [
+      "front": "John F. Kennedy was assasinated in what US city?",
+      "back": "Dallas"
+    },
+    {
+      "type": "cloze",
+      "full": "American involvement in the Korean War took place in the 1950's.",
+      "front": "American involvement in the ... War took place in the 1950's.",
+      "back": "Korean"
+    },
+    {
+      "type": "cloze",
+      "full": "The Magna Carta was published by the King of England.",
+      "front": "The Magna Carta was published by the King of ....",
+      "back": "England"
+    },
+    {
+      "type": "cloze",
+      "full": "Johannes Gutenburg is famous for developing the first printing press.",
+      "front": "Johannes Gutenburg is famous for developing the first ....",
+      "back": "printing press"
+    },
     {
       "type": "basic",
-      "front": "Whats Ariel's first name?",
-      "back": "Ariel"
+      "front": "The Hundred Years War was fought between England and what other country?",
+      "back": "France"
+    },
+    {
+      "type": "basic",
+      "front": "What Romain Emperor built a massive wall across Norther Britain in 122 A.D.?",
+      "back": "Hadrian"
+    },
+    {
+      "type": "cloze",
+      "full": "Martin Luther wrote a document known as the 95 Theses.",
+      "front": "... wrote a document known as the 95 Theses.",
+      "back": "Martin Luther"
+    },
+    {
+      "type": "cloze",
+      "full": "The Khmer Rouge was a regime ruling Cambodia in the 20th century.",
+      "front": "The Khmer Rouge was a regime ruling ... in the 20th century.",
+      "back": "Cambodia"
     }
   ]
 }

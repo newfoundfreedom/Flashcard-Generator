@@ -4,7 +4,7 @@ let cardCollection = './cardCollection.json';
 
 // BasicCard constructor which accepts 'question' and 'answer' arguments and
 //   contains front and back methods
-function BasicCard (deck, question, answer) {
+function BasicCard(deck, question, answer) {
     this.front = question;
     this.back = answer;
 
@@ -13,13 +13,19 @@ function BasicCard (deck, question, answer) {
             throw err;
         } else {
             let cards = JSON.parse(data);
-            cards[deck].push({"type": "basic", "front": question, "back": answer});
+            cards[deck].push(
+                {
+                    "type": "basic",
+                    "front": question,
+                    "back": answer
+                }
+            );
             cardsFormatted = JSON.stringify(cards);
             fs.writeFile(cardCollection, cardsFormatted, function (err) {
                 if (err) {
                     throw err;
                 } else {
-                    console.log(`  >> Your question has been successfully added to the ${deck} Deck.\n`)
+                    console.log(chalk.green(` >> Your question has been successfully added to the ${deck} Deck.\n`));
                 }
             }); // write it back
         }

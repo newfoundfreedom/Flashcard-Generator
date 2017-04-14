@@ -18,7 +18,7 @@ function NewDeck(newDeckName) {
                 if (err) {
                     throw err;
                 } else {
-                    console.log(chalk.green(`  >> The ${newDeckName} Deck has been successfully added.\n`));
+                    console.log(chalk.green(` >> The ${newDeckName} Deck has been successfully added.\n`));
                 }
             }); // write it back
         }
