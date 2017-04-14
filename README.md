@@ -27,7 +27,7 @@ yarn install
 ## Execution
 Run the application by typing 
 ```
-node main
+node flashy
 ```
  
  <br>
